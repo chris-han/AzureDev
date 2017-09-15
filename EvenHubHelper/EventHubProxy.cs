@@ -37,46 +37,66 @@ namespace EventHubHelper
 
 
             eventHubClient = EventHubClient.CreateFromConnectionString(connectionStringBuilder.ToString());
-
+            try { 
             await SendMessagesToEventHub(info);
+            }
+            catch (Exception exception)
+            {
+                Debug.Write($"{DateTime.Now} > Exception: {exception.Message}");
 
-
-
-
+            }
+            finally
+            {
+                Debug.Write($"message sent.");
+                await eventHubClient.CloseAsync();
+            }
         }
 
-        // Creates an event hub client and sends 100 messages to the event hub.
-        //private static async Task Test100MessagesToEventHub()
-        //{
-        //    try
-        //    {
-        //        Random random = new Random();
-        //        for (var i = 0; i < 100; i++)
-        //        {
-        //            MetricEvent info = new MetricEvent() { DeviceId = random.Next(100)};
-        //            var serializedString = Serialize(info, Formatting.Indented);
-        //            EventData eventData = new EventData(Encoding.UTF8.GetBytes(serializedString));
-        //            Debug.Write($"Sending message: {serializedString.ToString()}");
-        //            //PartitionSender ps = eventHubClient.CreatePartitionSender("7");
-        //            string uniqueEventId = Guid.NewGuid().ToString();
+        //Creates an event hub client and sends 100 messages to the event hub.
+        public static async Task Test100MessagesToEventHub(int numberOfDevices)
+        {
+            var connectionStringBuilder = new EventHubsConnectionStringBuilder(EhConnectionString)
+            {
+                TransportType = TransportType.AmqpWebSockets
+            };
 
-        //            eventData.Properties["EventId"] = uniqueEventId;
-        //            //await ps.SendAsync(eventData);
-        //            await eventHubClient.SendAsync(eventData);
+            if (connectionStringBuilder.EntityPath == null)
+            {
+                connectionStringBuilder.EntityPath = EhEntityPath;
+            }
 
-        //            //await Task.Delay(1);
-        //        }
-        //    }
-        //    catch (Exception exception)
-        //    {
-        //        Debug.Write($"{DateTime.Now} > Exception: {exception.Message}");
 
-        //    }
-        //    finally { 
-        //    Debug.Write($"messages sent.");
-        //    await eventHubClient.CloseAsync();
-        //    }
-        //}
+            eventHubClient = EventHubClient.CreateFromConnectionString(connectionStringBuilder.ToString());
+
+            try
+            {
+                Random random = new Random();
+                for (var i = 0; i < numberOfDevices; i++)
+                {
+                    MetricEvent info = new MetricEvent() {
+                        DeviceId = random.Next(numberOfDevices),                        
+                        MakeTime = DateTime.Now,
+                        Purity = random.Next(numberOfDevices),
+                        Shortage = random.Next(numberOfDevices)
+                    };
+
+                    var serializedString = Serialize(info, Formatting.Indented);
+                    Debug.Write($"Sending message: {serializedString.ToString()}");
+                    await SendMessagesToEventHub(info);
+
+                }
+            }
+            catch (Exception exception)
+            {
+                Debug.Write($"{DateTime.Now} > Exception: {exception.Message}");
+
+            }
+            finally
+            {
+                Debug.Write($"{numberOfDevices} messages sent.");
+                await eventHubClient.CloseAsync();
+            }
+        }
         private static async Task SendMessagesToEventHub(MetricEvent info)
         {
             string uniqueEventId = Guid.NewGuid().ToString();
@@ -98,7 +118,7 @@ namespace EventHubHelper
             finally
             {
                 Debug.Write($"message {uniqueEventId} sent.");
-                await eventHubClient.CloseAsync();
+                //await eventHubClient.CloseAsync();
             }
         }
         private static string Serialize(object item, Formatting formatting = default(Formatting))
