@@ -35,14 +35,23 @@ namespace Test_EventHub
 
         private void btn100Msg_Click(object sender, EventArgs e)
         {
-            EventHubHelper.MetricEvent info = new MetricEvent()
+            var task = EventHubHelper.EventHubProxy.Test100MessagesToEventHub(1000);
+            //task.ConfigureAwait(false);
+            task.ContinueWith(t => { Debug.Write(t.Exception.Message); },
+        TaskContinuationOptions.OnlyOnFaulted);
+        }
+
+        private void btnPBI_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            MetricEvent info = new MetricEvent()
             {
                 DeviceId = 1,
-                MakeTime = DateTime.Now,
-                Purity = 100,
-                Shortage = 98
-            };
-            var task = EventHubHelper.EventHubProxy.Test100MessagesToEventHub(100);
+                        MakeTime = DateTime.Now,
+                        Purity = random.Next(100),
+                        Shortage = random.Next(100)
+                    };
+            var task = EventHubHelper.EventHubProxy.SendMessagesToPBI(info);
             //task.ConfigureAwait(false);
             task.ContinueWith(t => { Debug.Write(t.Exception.Message); },
         TaskContinuationOptions.OnlyOnFaulted);

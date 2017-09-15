@@ -30,11 +30,12 @@
         {
             this.Single = new System.Windows.Forms.Button();
             this.btn100Msg = new System.Windows.Forms.Button();
+            this.btnPBI = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Single
             // 
-            this.Single.Location = new System.Drawing.Point(336, 258);
+            this.Single.Location = new System.Drawing.Point(134, 74);
             this.Single.Name = "Single";
             this.Single.Size = new System.Drawing.Size(205, 87);
             this.Single.TabIndex = 0;
@@ -44,7 +45,7 @@
             // 
             // btn100Msg
             // 
-            this.btn100Msg.Location = new System.Drawing.Point(336, 415);
+            this.btn100Msg.Location = new System.Drawing.Point(473, 74);
             this.btn100Msg.Name = "btn100Msg";
             this.btn100Msg.Size = new System.Drawing.Size(205, 87);
             this.btn100Msg.TabIndex = 1;
@@ -52,11 +53,22 @@
             this.btn100Msg.UseVisualStyleBackColor = true;
             this.btn100Msg.Click += new System.EventHandler(this.btn100Msg_Click);
             // 
+            // btnPBI
+            // 
+            this.btnPBI.Location = new System.Drawing.Point(274, 343);
+            this.btnPBI.Name = "btnPBI";
+            this.btnPBI.Size = new System.Drawing.Size(205, 87);
+            this.btnPBI.TabIndex = 2;
+            this.btnPBI.Text = "PBI stream";
+            this.btnPBI.UseVisualStyleBackColor = true;
+            this.btnPBI.Click += new System.EventHandler(this.btnPBI_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 647);
+            this.Controls.Add(this.btnPBI);
             this.Controls.Add(this.btn100Msg);
             this.Controls.Add(this.Single);
             this.Name = "Form1";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button Single;
         private System.Windows.Forms.Button btn100Msg;
+        private System.Windows.Forms.Button btnPBI;
     }
 }
 
