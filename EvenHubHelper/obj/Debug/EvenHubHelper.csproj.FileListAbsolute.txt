@@ -10,3 +10,15 @@ C:\Users\chha\source\repos\Test EventHub\EvenHubHelper\obj\Debug\EvenHubHelper.c
 C:\Users\chha\source\repos\Test EventHub\EvenHubHelper\obj\Debug\EvenHubHelper.dll
 C:\Users\chha\source\repos\Test EventHub\EvenHubHelper\obj\Debug\EvenHubHelper.pdb
 C:\Users\chha\source\repos\Test EventHub\EvenHubHelper\obj\Debug\EvenHubHelper.csprojResolveAssemblyReference.cache
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\bin\Debug\EvenHubHelper.dll
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\bin\Debug\EvenHubHelper.pdb
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\bin\Debug\Microsoft.Azure.Amqp.dll
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\bin\Debug\Microsoft.Azure.EventHubs.dll
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\bin\Debug\Newtonsoft.Json.dll
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\bin\Debug\Microsoft.Azure.Amqp.xml
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\bin\Debug\Microsoft.Azure.EventHubs.xml
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\bin\Debug\Newtonsoft.Json.xml
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\obj\Debug\EvenHubHelper.csprojResolveAssemblyReference.cache
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\obj\Debug\EvenHubHelper.csproj.CoreCompileInputs.cache
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\obj\Debug\EvenHubHelper.dll
+C:\Users\chha\Source\Repos\AzureDev\EvenHubHelper\obj\Debug\EvenHubHelper.pdb

@@ -16,3 +16,21 @@ C:\Users\chha\source\repos\Test EventHub\Test EventHub\obj\Debug\Test EventHub.p
 C:\Users\chha\source\repos\Test EventHub\Test EventHub\obj\Debug\Test EventHub.csprojResolveAssemblyReference.cache
 C:\Users\chha\source\repos\Test EventHub\Test EventHub\bin\Debug\EvenHubHelper.dll
 C:\Users\chha\source\repos\Test EventHub\Test EventHub\bin\Debug\EvenHubHelper.pdb
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\bin\Debug\Test EventHub.exe.config
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\bin\Debug\Test EventHub.exe
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\bin\Debug\Test EventHub.pdb
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\bin\Debug\EvenHubHelper.dll
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\bin\Debug\Microsoft.Azure.Amqp.dll
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\bin\Debug\Microsoft.Azure.EventHubs.dll
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\bin\Debug\Newtonsoft.Json.dll
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\bin\Debug\EvenHubHelper.pdb
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\bin\Debug\Microsoft.Azure.Amqp.xml
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\bin\Debug\Microsoft.Azure.EventHubs.xml
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\bin\Debug\Newtonsoft.Json.xml
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\obj\Debug\Test EventHub.csprojResolveAssemblyReference.cache
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\obj\Debug\Test_EventHub.Form1.resources
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\obj\Debug\Test_EventHub.Properties.Resources.resources
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\obj\Debug\Test EventHub.csproj.GenerateResource.Cache
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\obj\Debug\Test EventHub.csproj.CoreCompileInputs.cache
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\obj\Debug\Test EventHub.exe
+C:\Users\chha\Source\Repos\AzureDev\Test EventHub\obj\Debug\Test EventHub.pdb

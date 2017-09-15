@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EventHubHelper;
+using System.Diagnostics;
 
 namespace Test_EventHub
 {
@@ -27,7 +28,9 @@ namespace Test_EventHub
                 Shortage = 98
             };
             var task = EventHubHelper.EventHubProxy.WriteDataAsync(info);
-            task.ConfigureAwait(false);
+            //task.ConfigureAwait(false);
+            task.ContinueWith(t => { Debug.Write(t.Exception.Message); },
+        TaskContinuationOptions.OnlyOnFaulted);
         }
     }
 }
